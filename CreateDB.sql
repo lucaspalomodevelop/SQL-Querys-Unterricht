@@ -7,7 +7,17 @@ CREATE TABLE `fach` (
 
 INSERT INTO `fach` (`id`, `name`) VALUES
 (1, 'Mathe'),
-(2, 'Informatik');
+(2, 'Informatik'),
+(3, 'Deutsch'),
+(4, 'Englisch'),
+(5, 'Französisch'),
+(6, 'Spanisch'),
+(7, 'Latein'),
+(8, 'Geschichte'),
+(9, 'Religion'),
+(10, 'Sport'),
+(11, 'Musik'),
+(12, 'Kunst');
 
 
 CREATE TABLE `klasse` (
@@ -17,7 +27,8 @@ CREATE TABLE `klasse` (
 
 INSERT INTO `klasse` (`id`, `name`) VALUES
 (1, 'FI195'),
-(2, 'SO195');
+(2, 'SO195'),
+(3, 'EIT191');
 
 
 CREATE TABLE `lehrer` (
@@ -27,7 +38,8 @@ CREATE TABLE `lehrer` (
 
 INSERT INTO `lehrer` (`id`, `name`) VALUES
 (1, 'Herbert'),
-(2, 'Uschi');
+(2, 'Uschi'),
+(3, 'Tom');
 
 
 CREATE TABLE `schueler` (
@@ -40,7 +52,10 @@ INSERT INTO `schueler` (`id`, `name`, `klasse_id`) VALUES
 (1, 'Lucas', 1),
 (2, 'Bastian', 1),
 (3, 'Antonia', 2),
-(4, 'Klaus-Günther', 2);
+(4, 'Klaus-Günther', 2),
+(5, 'Fridolin', 3),
+(6, 'Lukas', 3),
+(7, 'Lena', 3);
 
 
 CREATE TABLE `unterricht` (
@@ -56,7 +71,8 @@ INSERT INTO `unterricht` (`fach_id`, `lehrer_id`, `klassen_id`, `Zeitpunkt`, `id
 (1, 2, 1, '2022-03-22 08:00:00', 1),
 (1, 1, 2, '2022-03-22 08:00:00', 2),
 (2, 1, 1, '2022-03-22 09:30:00', 3),
-(2, 2, 2, '2022-03-22 09:30:00', 4);
+(2, 2, 2, '2022-03-22 09:30:00', 4),
+(2, 3, 3, '2022-03-22 09:30:00', 5);
 
 ALTER TABLE `fach`
   ADD PRIMARY KEY (`id`);
