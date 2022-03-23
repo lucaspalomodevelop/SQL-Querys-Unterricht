@@ -1,0 +1,1 @@
+SELECT klasse.name , COUNT(*) as Schueleranzahl from klasse left join schueler on schueler.klasse_id = klasse.id GROUP by schueler.klasse_id ;
